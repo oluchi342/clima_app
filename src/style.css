@@ -61,6 +61,19 @@ p{
     font-size: 58px;
     
 }
+.temperature-icon {
+    position: relative;
+    font-size: 58px;
+}
+.temperature-value {
+    font-size: 80px;
+    font-weight: bold;
+}
+.temperature-symbol {
+    font-size: 28px;
+    position: relative;
+    top: -38px;
+}
 .current-details {
     color: rgba(39, 33, 66, 0.4);
     font-size: 16px;

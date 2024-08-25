@@ -58,12 +58,15 @@ p{
     margin: 0;
 }
 .current-temperature {
-    font-size: 58px;
+    display: flex;
+    align-items: center;
+    
     
 }
 .temperature-icon {
-    position: relative;
-    font-size: 58px;
+    width: 88px;
+    height: 88px;
+    margin-top: 8px;
 }
 .temperature-value {
     font-size: 80px;

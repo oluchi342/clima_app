@@ -7,6 +7,8 @@ function displayWeather(response) {
     let windElement = document.querySelector("#wind");
     let timeElement = document.querySelector("#time");
     let date = new Date;
+    let iconImage = document.querySelector("#icon");
+    iconImage.innerHTML = ` <img src="${response.data.condition.icon_url}" class="temperature-icon"/> `;
 
 
     cityElement.innerHTML = response.data.city;

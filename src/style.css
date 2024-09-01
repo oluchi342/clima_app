@@ -97,15 +97,32 @@ p{
     margin-right: 10px;
 }
 .daily-forecast {
-    color: #f65282;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }
-.daily-forecast span strong {
-    color: #f65282;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.5;
+.daily-forecast-date {
+    text-align: center;
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
+.daily-forecast-icon {
+    font-size: 30px;
+    text-align: center;
+}
+.daily-forecast-temperatures {
+    text-align: center;
+    color: #f65282;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.daily-forecast-temperature {
+    padding: 0 10px;
+}
+
 footer {
     border-top: 1px solid #f9f7fe;
     text-align: center;

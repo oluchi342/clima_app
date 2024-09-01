@@ -18,6 +18,25 @@ header {
 main {
     margin: 15px 0;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .weather_app {
+        max-width: 90%; /* Take more width on smaller screens */
+        margin: 20px auto; /* Reduce margin for smaller devices */
+        padding: 20px; /* Slightly reduce padding */
+    }
+
+    header {
+        padding-bottom: 20px; /* Reduce padding in the header */
+    }
+
+    main {
+        margin: 10px 0; /* Adjust margin for main content */
+    }
+}
+
+
 ul {
     display: flex;
     justify-content: space-between;

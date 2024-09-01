@@ -48,7 +48,29 @@ function searchSubmit(event) {
     searchCity(searchInput.value);
 }
 
+function displayForecast() {
+    let days = ["Tue", "Wed", "Thu", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function(day) {
+        forecastHtml = 
+        forecastHtml + 
+        ` <div class="daily-forecast-day">
+        <div class="daily-forecast-date">${day}</div>
+        <div class="daily-forecast-icon">🌦️</div>
+        <div class="daily-forecast-temperatures">
+        <div class="daily-forecast-temperature"><strong>15⁰</strong></div> 
+        <div class="daily-forecast-temperature">9⁰</div>
+        </div>
+        </div>
+        `;
+    });
+    let forecastElement = document.querySelector("#forecast")
+    forecastElement.innerHTML = forecastHtml;
+    
+}
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit)
 
 searchCity("Abuja");
+displayForecast();

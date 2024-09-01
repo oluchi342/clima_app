@@ -17,6 +17,8 @@ function displayWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windElement.innerHTML = `${response.data.wind.speed}km/h`;
     timeElement.innerHTML = formatDate(date);
+
+    getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -48,7 +50,15 @@ function searchSubmit(event) {
     searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+    let apiKey = "o4bcac1at7e73505ab4974f6a544518b";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+    console.log(response.data);
+
     let days = ["Tue", "Wed", "Thu", "Sat"];
     let forecastHtml = "";
 
@@ -73,4 +83,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit)
 
 searchCity("Abuja");
-displayForecast();
+
+
